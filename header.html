@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JO de Tulsa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style pour la barre de navigation */
+        header {
+            background: linear-gradient(to right, #f39c12, #e74c3c);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: top 0.3s;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 60px; /* Espace pour la barre de navigation fixe */
+        }
+
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header id="navbar">
+        <h1>JO de Tulsa sur Minecraft</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="participants.html">Participants</a></li>
+                <li><a href="epreuves.html">Épreuves</a></li>
+                <li><a href="live-updates.html">Mises à jour en direct</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Page d'accueil</h2>
+        <!-- Contenu de la page -->
+    </main>
+
+    <script>
+        // JavaScript pour la barre de navigation qui disparaît lorsqu'on défile vers le bas et réapparaît lorsqu'on défile vers le haut
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scroll vers le bas
+                navbar.style.top = "-60px"; // Cache la barre de navigation
+            } else {
+                // Scroll vers le haut
+                navbar.style.top = "0"; // Affiche la barre de navigation
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour les cas où la valeur de scroll est négative
+        });
+    </script>
+</body>
+</html>

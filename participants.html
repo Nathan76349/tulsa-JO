@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participants - JO de Tulsa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css - Ajouter les styles spécifiques aux participants ici */
+        .participants {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .participant-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .participant-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .participant-info {
+            padding: 10px;
+        }
+
+        .participant-info h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .participant-info p {
+            margin: 0;
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JO de Tulsa sur Minecraft</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="participants.html">Participants</a></li>
+                <li><a href="epreuves.html">Épreuves</a></li>
+                <li><a href="live-updates.html">Mises à jour en direct</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Participants</h2>
+            <div class="participants">
+                <div class="participant-card">
+                    <img src="images/carla-dlch.jpg" alt="Carla DLCH">
+                    <div class="participant-info">
+                        <h3>Carla DLCH</h3>
+                        <p>Pays: Harmonia</p>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <img src="images/antoine-aubert.jpg" alt="Antoine Aubert">
+                    <div class="participant-info">
+                        <h3>Antoine Aubert</h3>
+                        <p>Pays: Celestia</p>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <img src="images/corentin-aubert.jpg" alt="Corentin Aubert">
+                    <div class="participant-info">
+                        <h3>Corentin Aubert</h3>
+                        <p>Pays: Liberia</p>
+                    </div>
+                </div>
+
+                <div class="participant-card">
+                    <img src="images/nathan-aubert.jpg" alt="Nathan Aubert">
+                    <div class="participant-info">
+                        <h3>Nathan Aubert</h3>
+                        <p>Pays: Tulsa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JO de Tulsa sur Minecraft</p>
+    </footer>
+</body>
+</html>

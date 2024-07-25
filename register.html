@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - JO de Tulsa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>JO de Tulsa sur Minecraft</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Inscription</h2>
+            <form id="register-form">
+                <label for="pseudo">Pseudo:</label>
+                <select id="pseudo" name="pseudo" required>
+                    <option value="" disabled selected>Sélectionnez un pseudo</option>
+                    <option value="Antoine">Antoine</option>
+                    <option value="Corentin">Corentin</option>
+                    <option value="Nathan">Nathan</option>
+                    <option value="Carla">Carla</option>
+                </select>
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">S'inscrire</button>
+                <p id="message" class="message"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 JO de Tulsa sur Minecraft</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- Placez ce script dans le fichier de chaque page ou dans un fichier JS séparé -->
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll Down
+            header.classList.add('hidden');
+        } else {
+            // Scroll Up
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    });
+</script>

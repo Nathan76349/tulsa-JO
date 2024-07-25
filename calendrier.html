@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier - JO de Tulsa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css - Ajouter les styles spécifiques au calendrier ici */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .calendar-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .time-slot {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .event {
+            margin-bottom: 10px;
+        }
+
+        .ceremony {
+            background-color: #ffeb3b; /* Jaune pâle pour la cérémonie */
+        }
+
+        .epreuve {
+            background-color: #c8e6c9; /* Vert pâle pour les épreuves */
+        }
+
+        .event-time {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JO de Tulsa sur Minecraft</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="participants.html">Participants</a></li>
+                <li><a href="epreuves.html">Épreuves</a></li>
+                <li><a href="live-updates.html">Mises à jour en direct</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Calendrier de la Journée</h2>
+
+            <div class="calendar">
+                <div class="calendar-item">
+                    <div class="time-slot">08:00 - 08:10</div>
+                    <div class="event ceremony">
+                        <div class="event-time">08:00</div>
+                        <div class="event-description">Cérémonie d'ouverture</div>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="time-slot">08:10 - 08:20</div>
+                    <div class="event epreuve">
+                        <div class="event-time">08:10</div>
+                        <div class="event-description">Natation</div>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="time-slot">08:20 - 08:30</div>
+                    <div class="event epreuve">
+                        <div class="event-time">08:20</div>
+                        <div class="event-description">Tir à l'Arc</div>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="time-slot">08:30 - 08:40</div>
+                    <div class="event epreuve">
+                        <div class="event-time">08:30</div>
+                        <div class="event-description">Jump</div>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="time-slot">08:40 - 08:50</div>
+                    <div class="event epreuve">
+                        <div class="event-time">08:40</div>
+                        <div class="event-description">Fight</div>
+                    </div>
+                </div>
+
+                <!-- Répétez les blocs pour les heures suivantes -->
+                <!-- Assurez-vous que les horaires sont cohérents -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JO de Tulsa sur Minecraft</p>
+    </footer>
+</body>
+</html>

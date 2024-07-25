@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - JO de Tulsa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Inclure le header ici -->
+    <header>
+        <h1>JO de Tulsa sur Minecraft</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="participants.html">Participants</a></li>
+                <li><a href="epreuves.html">Épreuves</a></li>
+                <li><a href="live-updates.html">Mises à jour en direct</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Bienvenue aux JO de Tulsa sur Minecraft</h2>
+            <p>Les Jeux Olympiques de Tulsa sur Minecraft réunissent des joueurs du monde entier pour s'affronter dans diverses épreuves. Explorez notre site pour découvrir les détails de chaque épreuve, les participants, le calendrier et les résultats en direct.</p>
+            <div class="info-cards">
+                <div class="card">
+                    <h3>Cérémonie d'ouverture</h3>
+                    <p>La cérémonie d'ouverture marquera le début des JO avec un spectacle grandiose. Restez à l'écoute pour plus de détails sur la date et l'heure.</p>
+                </div>
+                <div class="card">
+                    <h3>Calendrier</h3>
+                    <p>Consultez le calendrier pour connaître les dates et horaires des épreuves ainsi que les événements majeurs.</p>
+                </div>
+                <div class="card">
+                    <h3>Participants</h3>
+                    <p>Découvrez les participants représentant leurs pays dans cette compétition épique.</p>
+                </div>
+                <div class="card">
+                    <h3>Épreuves</h3>
+                    <p>Informez-vous sur les différentes épreuves auxquelles les participants vont concourir.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JO de Tulsa sur Minecraft</p>
+    </footer>
+</body>
+</html>
+<!-- Placez ce script dans le fichier de chaque page ou dans un fichier JS séparé -->
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll Down
+            header.classList.add('hidden');
+        } else {
+            // Scroll Up
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    });
+</script>

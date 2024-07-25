@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Épreuves - JO de Tulsa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Inclure le header ici -->
+    <header>
+        <h1>JO de Tulsa sur Minecraft</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="participants.html">Participants</a></li>
+                <li><a href="epreuves.html">Épreuves</a></li>
+                <li><a href="live-updates.html">Mises à jour en direct</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Les Épreuves</h2>
+            <div class="epreuves">
+                <div class="epreuve">
+                    <h3>Natation</h3>
+                    <img src="images/natation.jpg" alt="Natation">
+                    <p>Les participants s'affronteront dans des courses de natation avec des parcours variés et des défis intéressants.</p>
+                </div>
+                <div class="epreuve">
+                    <h3>Tir à l'arc</h3>
+                    <img src="images/tir-arc.jpg" alt="Tir à l'arc">
+                    <p>Les archers viseront des cibles avec précision pour montrer leurs compétences dans cette épreuve.</p>
+                </div>
+                <div class="epreuve">
+                    <h3>Jump</h3>
+                    <img src="images/jump.jpg" alt="Jump">
+                    <p>Les participants devront démontrer leur habileté en saut dans cette épreuve spectaculaire.</p>
+                </div>
+                <div class="epreuve">
+                    <h3>Fight</h3>
+                    <img src="images/fight.jpg" alt="Fight">
+                    <p>Les compétiteurs s'affronteront dans des combats pour déterminer les meilleurs combattants dans cette épreuve intense.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JO de Tulsa sur Minecraft</p>
+    </footer>
+</body>
+</html>
+<!-- Placez ce script dans le fichier de chaque page ou dans un fichier JS séparé -->
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll Down
+            header.classList.add('hidden');
+        } else {
+            // Scroll Up
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    });
+</script>
